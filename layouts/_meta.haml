@@ -5,7 +5,6 @@
     %ul.tags
       %li= pretty_time(item[:created_at])
       - if disqus_shortname 
-        - @config[:include_disqus_js] = true
         %li
           &middot;
         %li
@@ -14,5 +13,5 @@
         %li &middot;
         - item[:tags].sort.each do |tag|
           %li
-            %a(href="/tags/#{tag}/" class='tag')
+            %a(href="/tags/#{tag.gsub(' ', '-').downcase}/" class='tag')
               = tag

@@ -1,6 +1,9 @@
 source :gemcutter
 
 gem "nanoc"
+gem "compass"
+gem "html5-boilerplate"
+gem "compass-susy-plugin"
 gem "rack"
 gem "rake"
 gem "mime-types"
@@ -9,3 +12,4 @@ gem "haml"
 gem "rdiscount"
 gem "builder"
 gem "activesupport"
+gem "i18n"

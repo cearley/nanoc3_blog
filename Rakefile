@@ -1,4 +1,3 @@
-
 require 'nanoc3/tasks'
 require 'fileutils'
 
@@ -44,7 +43,7 @@ TEMPLATE
   def calc_path(title)
     year, month_day = @ymd.split('-', 2)
     path = "content/" + year + "/" 
-    filename = month_day + "-" + title.parameterize('_') + ".md"
+    filename = month_day + "-" + title.parameterize('-') + ".md"
     [path, filename, path + filename]
   end
 end
