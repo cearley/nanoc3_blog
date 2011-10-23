@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require 'compass'
+Compass.add_project_configuration 'compass/config.rb'
 
 preprocess do
   # authors may unpublish items by setting meta attribute publish: false
@@ -9,8 +11,14 @@ preprocess do
   add_update_item_attributes
 end
 
+compile '/assets/css/partials/_*/' do
+  # don't output partials, so return nil
+  nil
+end
+
 compile '/assets/css/*/' do
-  filter :sass
+  # Without Compass, use: filter :sass, :syntax => :scss if item[:extension] == 'scss'
+  filter :sass, Compass.sass_engine_options
 end
 
 compile '*' do
@@ -29,12 +37,18 @@ compile '*' do
   end
 
   # use layouts with .html extension or layout specified in meta
-  item[:layout] = "none" unless item[:layout] || File.extname(route_path(item)) == '.html' 
+  item[:layout] = "none" unless item[:layout] || File.extname(route_path(item)) == '.html'
 
   layout 'default' unless item[:layout] == "none"
 end
 
+route '/assets/css/partials/_*/' do
+  # don't output partials, so return nil
+  nil
+end
+
 route '/assets/css/*/' do
+  # don't generate a directory like we do for HTML files
   item.identifier.chop + '.css'
 end
 
@@ -42,4 +56,4 @@ route '*' do
   route_path(item)
 end
 
-layout '*', :haml
+layout '*', :haml, :format => :html5

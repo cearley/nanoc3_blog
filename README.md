@@ -1,29 +1,21 @@
 # nanoc3_blog
 
-This is a [nanoc3](http://nanoc.stoneship.org/) blog starter kit. FreeBSD licensed.
+This is a fork of the [nanoc3 Blog Starter Kit](https://github.com/mgutz/nanoc3_blog/) by Mario L. Gutierrez. His template provides an excellent starting point but lacks only a richer CSS styling framework. So this project adds the following features:
 
-View this project on [nanoc3-blog.mgutz.com](http://nanoc3-blog.mgutz.com/).
+1. [Compass](http://compass-style.org/) integration with the [html5-boilerplate](https://github.com/sporkd/compass-html5-boilerplate) extension
+2. The [Susy](https://github.com/ericam/compass-susy-plugin) semantic CSS grid plugin for Compass
 
-Features
+The main features of the original project are preserved, such as the handling of articles and archives, tag pages, and DISQUS integration. However, there are some some fixes too - Such as those mentioned in this [article by Chris Kempson](http://chriskempson.com/2011/02/01/blogging-with-nanoc3-blog-starter-kit.html).
 
-1. Uses the appropriate filter based on the file extension: .erb -> ERB, .haml -> HAML, .md, .markdown -> BlueCloth, .sass -> SASS
-2. Uses the filesystem\_unified datasource, so metadata file or header is optional.
-3. Rolls/archives articles to front page.
-4. Generates tag pages.
-5. Minimalist styling.
-6. Uses SASS
-7. DISQUS integration.
+(See CHANGES.md for a complete list of changes.)
 
-## Prerequisites
-
-Know how to use `terminal, Ruby, HAML, SASS` and `Markdown`.
 
 ## Installation
 
 From the command line
 
     % gem install bundler
-    % git clone git://github.com/mgutz/nanoc3_blog.git your_blog
+    % git clone https://cearley@github.com/cearley/nanoc3_blog.git your_blog
     % cd your_blog
     % bundle install
 
