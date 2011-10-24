@@ -1,3 +1,9 @@
+## 2011-Oct-24
+
+* Added support for Feedburner and Google Webmaster Tools.
+
+* Added Rake task to ping Google when the site is updated.
+
 ## 2011-Oct-23
 
 * Added the Susy semantic CSS grid plugin for Compass.

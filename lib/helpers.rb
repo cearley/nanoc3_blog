@@ -186,3 +186,27 @@ def derive_created_at(item)
   end
   date
 end
+
+# Use special settings from the site configuration to generate the files
+# necessary for various webmaster tools authentications, such as the services
+# from Google, Yahoo and Bing.
+#
+# This loops through all the items in the `webmaster_tools` setting, using
+# its properties to generate a new item.
+#
+# See config.yaml for more documentation on the input format.
+def create_webmaster_tools_authentications
+  return unless @site.config[:output_generated_assets]
+
+  @site.config[:webmaster_tools].each do |file|
+    next if file[:identifier].nil?
+    content    = file.delete(:content)
+    identifier = file.delete(:identifier)
+    file.merge({ :is_hidden => true })
+    @items << Nanoc3::Item.new(
+      content,
+      file,
+      identifier
+    )
+  end
+end

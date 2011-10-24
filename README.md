@@ -34,7 +34,6 @@ Compile the site
 
 Preview the site on `http://localhost:3000`
 
-
 ## Customizing Existing Content
 
 Edit these two files:
@@ -108,3 +107,4 @@ If a single extension is used, then the files are assumed to be CSS and HTML:
 
     .sass #=> .css
     .* #=> .html
+

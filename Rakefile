@@ -1,5 +1,10 @@
 require 'nanoc3/tasks'
 require 'fileutils'
+Dir['tasks/*.rake'].each { |f| import f }
+
+def config
+  @config ||= YAML.load_file(File.join(File.dirname(__FILE__), 'config.yaml'))
+end
 
 namespace :create do
 

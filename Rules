@@ -9,6 +9,7 @@ preprocess do
   copy_static
   create_tag_pages
   add_update_item_attributes
+  create_webmaster_tools_authentications
 end
 
 compile '/assets/css/partials/_*/' do
@@ -19,6 +20,10 @@ end
 compile '/assets/css/*/' do
   # Without Compass, use: filter :sass, :syntax => :scss if item[:extension] == 'scss'
   filter :sass, Compass.sass_engine_options
+end
+
+# Don't filter or layout any google files in the assets directory.
+compile %r{^/(google|robots|assets)} do
 end
 
 compile '*' do
@@ -50,6 +55,10 @@ end
 route '/assets/css/*/' do
   # don't generate a directory like we do for HTML files
   item.identifier.chop + '.css'
+end
+
+route '/htaccess/' do
+  '/.htaccess'
 end
 
 route '*' do
