@@ -15,7 +15,8 @@ Know how to use `terminal, Ruby, HAML, SASS` and `Markdown`.
 ## Installation
 
 From the command line
-
+    
+    #!console
     % gem install bundler
     % git clone git://github.com/mgutz/nanoc3_blog.git your_blog
     % cd your_blog
@@ -25,6 +26,7 @@ From the command line
 
 Compile the site
 
+    #!console
     # cleans output/ directory. `rm -rf output` works just as well
     % rake clean 
 
@@ -57,6 +59,7 @@ To style the site: `content/assets/style.sass`
 
 Edit the Markdown file created by running this command:
 
+    #!console
     # filename is written to console
     % rake create:article title='Hello world'
 
@@ -76,4 +79,5 @@ Edit the configuration files:
 Transfer `output/*` to your hosted web server. If use rsync, then
 edit the settings in `config.yaml` and execute
 
+    #!console
     % rake deploy:rsync

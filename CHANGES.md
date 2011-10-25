@@ -1,3 +1,8 @@
+## 2011-Oct-25
+
+* Added code colorization using the [Pygments](http://pygments.org/)
+  syntax highlighter.
+
 ## 2011-Oct-24
 
 * Added support for Feedburner and Google Webmaster Tools.

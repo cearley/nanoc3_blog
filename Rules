@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 require 'compass'
+require 'pygmentize'
+
 Compass.add_project_configuration 'compass/config.rb'
 
 preprocess do
@@ -37,6 +39,7 @@ compile '*' do
   elsif ext == 'md' || ext == 'markdown'
     filter :erb
     filter :rdiscount
+    filter :colorize_syntax, :default_colorizer => :pygmentize
   else
     raise "Filter is not configured for #{item.identifier} in Rules file."
   end
@@ -47,7 +50,7 @@ compile '*' do
   layout 'default' unless item[:layout] == "none"
 end
 
-route '/assets/css/partials/_*/' do
+route '/assets/css/partials/*/' do
   # don't output partials, so return nil
   nil
 end
