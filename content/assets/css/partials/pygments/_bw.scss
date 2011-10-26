@@ -1,88 +1,31 @@
-pre, code .hll {
-  background-color: #ffffcc; }
-
 pre, code {
-  background: #ffffff; }
+  .hll {
+    background-color: #ffffcc; }
+  background: #ffffff;
+  .c {
+    font-style: italic; }
+  .err {
+    border: 1px solid #FF0000; }
+  .k {
+    font-weight: bold; }
+  .cm, .c1, .cs, .ge {
+    font-style: italic; }
+  .gh, .gp, .gs, .gu, .kc, .kd, .kn, .kr {
+    font-weight: bold; }
+  .s {
+    font-style: italic; }
+  .nc, .ni, .ne, .nn, .nt, .ow {
+    font-weight: bold; }
+  .sb, .sc, .sd, .s2 {
+    font-style: italic; }
+  .se {
+    font-weight: bold;
+    font-style: italic; }
+  .sh {
+    font-style: italic; }
+  .si {
+    font-weight: bold;
+    font-style: italic; }
+  .sx, .sr, .s1, .ss {
+    font-style: italic; } }
 
-pre, code .c {
-  font-style: italic; }
-
-/* Comment */
-
-pre, code .err {
-  border: 1px solid #FF0000; }
-
-/* Error */
-
-pre, code .k {
-  font-weight: bold; }
-
-/* Keyword */
-
-pre, code .cm, pre, code .c1, pre, code .cs, pre, code .ge {
-  font-style: italic; }
-
-/* Comment.Multiline */
-/* Comment.Single */
-/* Comment.Special */
-/* Generic.Emph */
-
-pre, code .gh, pre, code .gp, pre, code .gs, pre, code .gu, pre, code .kc, pre, code .kd, pre, code .kn, pre, code .kr {
-  font-weight: bold; }
-
-/* Generic.Heading */
-/* Generic.Prompt */
-/* Generic.Strong */
-/* Generic.Subheading */
-/* Keyword.Constant */
-/* Keyword.Declaration */
-/* Keyword.Namespace */
-/* Keyword.Reserved */
-
-pre, code .s {
-  font-style: italic; }
-
-/* Literal.String */
-
-pre, code .nc, pre, code .ni, pre, code .ne, pre, code .nn, pre, code .nt, pre, code .ow {
-  font-weight: bold; }
-
-/* Name.Class */
-/* Name.Entity */
-/* Name.Exception */
-/* Name.Namespace */
-/* Name.Tag */
-/* Operator.Word */
-
-pre, code .sb, pre, code .sc, pre, code .sd, pre, code .s2 {
-  font-style: italic; }
-
-/* Literal.String.Backtick */
-/* Literal.String.Char */
-/* Literal.String.Doc */
-/* Literal.String.Double */
-
-pre, code .se {
-  font-weight: bold;
-  font-style: italic; }
-
-/* Literal.String.Escape */
-
-pre, code .sh {
-  font-style: italic; }
-
-/* Literal.String.Heredoc */
-
-pre, code .si {
-  font-weight: bold;
-  font-style: italic; }
-
-/* Literal.String.Interpol */
-
-pre, code .sx, pre, code .sr, pre, code .s1, pre, code .ss {
-  font-style: italic; }
-
-/* Literal.String.Other */
-/* Literal.String.Regex */
-/* Literal.String.Single */
-/* Literal.String.Symbol */

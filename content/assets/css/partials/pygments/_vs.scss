@@ -1,93 +1,33 @@
-pre, code .hll {
-  background-color: #ffffcc; }
-
 pre, code {
-  background: #ffffff; }
+  .hll {
+    background-color: #ffffcc; }
+  background: #ffffff;
+  .c {
+    color: #008000; }
+  .err {
+    border: 1px solid #FF0000; }
+  .k {
+    color: #0000ff; }
+  .cm {
+    color: #008000; }
+  .cp {
+    color: #0000ff; }
+  .c1, .cs {
+    color: #008000; }
+  .ge {
+    font-style: italic; }
+  .gh, .gp, .gs, .gu {
+    font-weight: bold; }
+  .kc, .kd, .kn, .kp, .kr {
+    color: #0000ff; }
+  .kt {
+    color: #2b91af; }
+  .s {
+    color: #a31515; }
+  .nc {
+    color: #2b91af; }
+  .ow {
+    color: #0000ff; }
+  .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+    color: #a31515; } }
 
-pre, code .c {
-  color: #008000; }
-
-/* Comment */
-
-pre, code .err {
-  border: 1px solid #FF0000; }
-
-/* Error */
-
-pre, code .k {
-  color: #0000ff; }
-
-/* Keyword */
-
-pre, code .cm {
-  color: #008000; }
-
-/* Comment.Multiline */
-
-pre, code .cp {
-  color: #0000ff; }
-
-/* Comment.Preproc */
-
-pre, code .c1, pre, code .cs {
-  color: #008000; }
-
-/* Comment.Single */
-/* Comment.Special */
-
-pre, code .ge {
-  font-style: italic; }
-
-/* Generic.Emph */
-
-pre, code .gh, pre, code .gp, pre, code .gs, pre, code .gu {
-  font-weight: bold; }
-
-/* Generic.Heading */
-/* Generic.Prompt */
-/* Generic.Strong */
-/* Generic.Subheading */
-
-pre, code .kc, pre, code .kd, pre, code .kn, pre, code .kp, pre, code .kr {
-  color: #0000ff; }
-
-/* Keyword.Constant */
-/* Keyword.Declaration */
-/* Keyword.Namespace */
-/* Keyword.Pseudo */
-/* Keyword.Reserved */
-
-pre, code .kt {
-  color: #2b91af; }
-
-/* Keyword.Type */
-
-pre, code .s {
-  color: #a31515; }
-
-/* Literal.String */
-
-pre, code .nc {
-  color: #2b91af; }
-
-/* Name.Class */
-
-pre, code .ow {
-  color: #0000ff; }
-
-/* Operator.Word */
-
-pre, code .sb, pre, code .sc, pre, code .sd, pre, code .s2, pre, code .se, pre, code .sh, pre, code .si, pre, code .sx, pre, code .sr, pre, code .s1, pre, code .ss {
-  color: #a31515; }
-
-/* Literal.String.Backtick */
-/* Literal.String.Char */
-/* Literal.String.Doc */
-/* Literal.String.Double */
-/* Literal.String.Escape */
-/* Literal.String.Heredoc */
-/* Literal.String.Interpol */
-/* Literal.String.Other */
-/* Literal.String.Regex */
-/* Literal.String.Single */
-/* Literal.String.Symbol */
