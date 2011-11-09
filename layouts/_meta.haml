@@ -4,6 +4,11 @@
   .meta
     %ul.tags
       %li= pretty_time(item[:created_at])
+      - if item[:author]
+        %li
+          &middot;
+        %li
+          = "Posted by " + (item[:author])
       - if disqus_shortname 
         %li
           &middot;
