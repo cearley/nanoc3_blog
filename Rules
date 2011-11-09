@@ -25,7 +25,7 @@ compile '/assets/css/*/' do
 end
 
 # Don't filter or layout any google files in the assets directory.
-compile %r{^/(google|robots|assets)} do
+compile %r{^/(google|assets)} do
 end
 
 compile '*' do
