@@ -177,7 +177,7 @@ end
 private
 
 def derive_created_at(item)
-  parts = item.identifier.gsub('-', '/').split('/')[1,3]
+  parts = item.identifier.gsub('_', '/').split('/')[1,3]
   date = '1980/1/1'
   begin
     Date.strptime(parts.join('/'), "%Y/%m/%d")
