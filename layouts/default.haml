@@ -58,7 +58,8 @@
     -# All JavaScript at the bottom, except for Modernizr and Respond.
     -# Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
     %script{ :src => "/assets/js/modernizr.min.js" }
-    %script{ :src => "/assets/js/respond.min.js" }
+    -# Note: respond.js causes IE 8 to throw errors on page load
+    -#%script{ :src => "/assets/js/respond.min.js" }
     
   %body
     .container
