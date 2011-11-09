@@ -4,13 +4,20 @@
   # may be set by partials
 
   def keywords
+    # Use specific item keywords, default to meta_data in config.yaml
+    keywords = @item[:keywords] || @config[:meta_data][:keywords]
     if is_front_page?
-      tag_set.join(', ') 
+      [keywords, tag_set].join(', ')
     else
       tags = @item[:tags].nil? ? '' : @item[:tags].join(', ') 
-      keywords = @item[:keywords] || ''
       [keywords, tags].join(', ')
     end
+  end
+  def description
+    @item[:excerpt] || @item[:description] || @config[:meta_data][:description]
+  end
+  def author
+    @item[:author] || @config[:meta_data][:author]
   end
   def link_unless_current(s)
     "<li><a href='/#{s}.html'>#{s}</a></li>" if @item.identifier != "/#{s}/" 
@@ -41,8 +48,8 @@
     %title= "#{@item[:title]}"
     %meta(content="text/html; charset=utf-8" http-equiv="Content-Type")/
     %meta(name="keywords" content="#{keywords}")/
-    %meta(name="description" content="#{@item[:excerpt]}")/
-    %meta(name="author" content="#{@item[:author]}")/
+    %meta(name="description" content="#{description}")/
+    %meta(name="author" content="#{author}")/
     
     -# Mobile viewport optimized: j.mp/bplateviewport
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
