@@ -15,9 +15,6 @@ meta_data:
   # Default author of a page
   author: <Author Name>
 
-  # E-mail address used in contact information, etc.
-  author_email: <email address>
-
   # Default keywords to use when an item does not specify its own
   keywords: 'keyword1, keyword2'
 
