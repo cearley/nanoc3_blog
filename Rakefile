@@ -6,6 +6,14 @@ def config
   @config ||= YAML.load_file(File.join(File.dirname(__FILE__), 'config.yaml'))
 end
 
+task :default => ['compile']
+
+desc "Compile items of this site"
+task :compile do
+  # Using system command together with tee so that output is still streamed to stdout
+  system("nanoc3 co")
+end
+
 namespace :create do
 
   desc "Creates a new article"
